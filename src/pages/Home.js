@@ -1,4 +1,3 @@
-import React from "react";
 import Infos from "../composant/infos-film";
 import { Link } from "react-router-dom";
 

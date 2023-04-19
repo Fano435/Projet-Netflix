@@ -7,8 +7,6 @@ body {
   background-color: black;
   color: white;
   background-repeat: no-repeat;
-
-  
 }
 /* tout pour le header */
 header {
@@ -18,14 +16,13 @@ header {
   padding: 20px;
   background-color: transparent;
   position: fixed;
-
 }
 
 .leftpartofheader {
   display: flex;
   justify-content: space-around;
   width: 375px;
-} 
+}
 
 .leftpartofheader span {
   font-size: 20px;
@@ -44,7 +41,7 @@ img {
   height: 650px;
   width: 100%;
 }
-.wrapper{
+.wrapper {
   position: absolute;
   left: 20px;
   display: block;
@@ -52,11 +49,9 @@ img {
   margin: 0 auto;
 }
 .landing-page h1 {
-
 }
 
 .landing-page p {
-  
 }
 
 .landing-page ul {
@@ -65,7 +60,6 @@ img {
   background-color: red;
   padding: 0px;
   gap: 20px;
-  
 }
 
 .premieritem {
@@ -84,14 +78,11 @@ img {
   border-radius: 10px;
 
   text-align: center;
- 
-
 }
 
 /* section des choxi des films a regarder */
 
 .pop-netflix {
-
 }
 
 .pop-netflix img {
@@ -103,16 +94,14 @@ img {
   list-style: none;
   display: flex;
   justify-content: space-between;
-
 }
 
 .pop-netflix h3 {
-
 }
 
 .landing-page {
   background-color: red;
-  background-image:url(https://images7.alphacoders.com/118/thumbbig-1189470.webp);
+  background-image: url(https://images7.alphacoders.com/118/thumbbig-1189470.webp);
   background-size: contain;
   background-size: cover;
   height: 60vh;
