@@ -1,5 +1,6 @@
 import React from "react";
-import Icon from "@iconify/react";
+import { Icon } from "@iconify/react";
+import "../style/landing-page.css";
 
 const LandingPage = () => {
   return (
