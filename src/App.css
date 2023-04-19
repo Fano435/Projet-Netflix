@@ -2,3 +2,119 @@ span {
   background-color: red;
   display: block;
 }
+
+body {
+  background-color: black;
+  color: white;
+  background-repeat: no-repeat;
+
+  
+}
+/* tout pour le header */
+header {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 20px;
+  background-color: transparent;
+  position: fixed;
+
+}
+
+.leftpartofheader {
+  display: flex;
+  justify-content: space-around;
+  width: 375px;
+} 
+
+.leftpartofheader span {
+  font-size: 20px;
+}
+
+.rightpartofheader {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 900px;
+  width: 250px;
+}
+
+/* tout pour la landing page */
+
+img {
+  height: 650px;
+  width: 100%;
+}
+.wrapper{
+  position: absolute;
+  left: 20px;
+  display: block;
+  width: 600px;
+  margin: 0 auto;
+}
+.landing-page h1 {
+
+}
+
+.landing-page p {
+  
+}
+
+.landing-page ul {
+  list-style: none;
+  display: flex;
+  background-color: red;
+  padding: 0px;
+  gap: 20px;
+  
+}
+
+.premieritem {
+  align-items: center;
+
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.deuxiemeitem {
+  background-color: grey;
+  padding: 10px;
+  border-radius: 10px;
+
+  text-align: center;
+ 
+
+}
+
+/* section des choxi des films a regarder */
+
+.pop-netflix {
+
+}
+
+.pop-netflix img {
+  width: 150px;
+  height: 250px;
+}
+
+.pop-netflix ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.pop-netflix h3 {
+
+}
+
+.landing-page {
+  background-color: red;
+  background-image:url(https://images7.alphacoders.com/118/thumbbig-1189470.webp);
+  background-size: contain;
+  background-size: cover;
+  height: 60vh;
+  background-repeat: no-repeat;
+}
