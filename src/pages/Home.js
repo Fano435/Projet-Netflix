@@ -1,5 +1,10 @@
 import Infos from "../composant/infos-film";
 import { Link } from "react-router-dom";
+import React, {useState,useEffect} from "react";
+import { Header } from "./header";
+import { LandingPage } from "./landing-page";
+import { ImageDeFilm } from "./choixdesfilm";
+
 
 function Home() {
   const [userData, setUserdata] = useState("");
@@ -27,6 +32,9 @@ function Home() {
         </h3>
       ))}
       Je suis la page d'acceuil
+      <Header/>
+      <LandingPage/>
+      <ImageDeFilm/>
       <Infos />
       <Link to={"/page"}>Lien vers la page détail</Link>
     </div>
