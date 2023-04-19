@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+a:hover {
+  font-weight: 600;
+}
+body {
+  background-color: black;
+  color: white;
+  background-repeat: no-repeat;
+}
+header {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 20px 0;
+  width: 100%;
+  align-items: center;
+  font-size: 120%;
+}
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+h1 {
+  width: 100%;
+  font-size: 3rem;
+}
