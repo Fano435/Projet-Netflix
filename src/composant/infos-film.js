@@ -1,13 +1,28 @@
 import React, { useState, useEffect } from "react";
 
-function filterBooleanProperties(obj) {
+function filterProperties(obj) {
   const filteredObj = {};
   for (const [key, value] of Object.entries(obj)) {
-    if (typeof value !== "boolean") {
-      filteredObj[key] = value;
+    if (typeof value === "string" || typeof value === "number") {
+      if (key != "id" && key != "imdb_id") {
+        filteredObj[key] = value;
+        if (value.toString().indexOf("/") == 0) {
+          filteredObj[key] = "https://image.tmdb.org/t/p/w200" + value;
+        }
+      }
     }
   }
   return filteredObj;
+}
+
+function rechercherFilm(input) {
+  const id = "";
+  nbFilms.forEach((film) => {
+    if (film.title == input) {
+      id = film.id;
+    }
+  });
+  return id;
 }
 
 function Infos() {
@@ -25,13 +40,12 @@ function Infos() {
     getData(url);
   }, []);
 
-  const cleanedData = filterBooleanProperties(userData);
-  console.log(userData);
-  console.log(cleanedData);
+  const cleanedData = filterProperties(userData);
 
   const dataCountries = cleanedData.production_countries;
-  const dataGenres = cleanedData.genres;
+  const dataGenres = userData.genres;
   const dataKeys = Object.keys(cleanedData);
+  const dataValues = Object.values(cleanedData);
   const backdropImg = cleanedData.backdrop_path;
   const posterImg = cleanedData.poster_path;
 
@@ -39,9 +53,10 @@ function Infos() {
     <div className="infos">
       <span>Je suis le component infos</span>
       {dataKeys?.map((key) => (
-        <h3>
-          {key} : {cleanedData.key}
-        </h3>
+        <span>{key}</span>
+      ))}
+      {dataValues?.map((value) => (
+        <span>{value}</span>
       ))}
       {dataCountries?.map((country) => (
         <h3>{country.name}</h3>
@@ -49,15 +64,6 @@ function Infos() {
       {dataGenres?.map((genre) => (
         <h3>{genre.name}</h3>
       ))}
-      <img
-        src={"https://image.tmdb.org/t/p/w200" + backdropImg}
-        alt={cleanedData.title}
-      ></img>
-      <img
-        src={"https://image.tmdb.org/t/p/w200" + posterImg}
-        alt={cleanedData.title}
-      ></img>
-      ;
     </div>
   );
 }
