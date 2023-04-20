@@ -66,7 +66,7 @@ function Infos({ id }) {
       onMouseOver={() => setIsHovering(true)}
       onMouseOut={() => setIsHovering(false)}
     >
-      {isHovering && <Popup sometext={posterImg} />}
+      {/* {isHovering && <Popup sometext={posterImg} />} */}
       <img src={backdropImg}></img>
     </div>
   );
