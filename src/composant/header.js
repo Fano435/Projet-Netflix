@@ -17,6 +17,7 @@ const Header = () => {
       <li>Movie</li>
       <li>Tv Shows</li>
       <li>My list</li>
+      <li><button>Bonjour</button></li>
     </header>
   );
 };
