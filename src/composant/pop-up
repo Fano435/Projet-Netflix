@@ -1,0 +1,10 @@
+const Popup = ({sometext}) => {
+
+  return (
+    <div>
+{sometext}
+    </div>
+  )
+}
+
+export default Popup;
