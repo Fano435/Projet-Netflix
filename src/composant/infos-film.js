@@ -42,7 +42,12 @@ function Infos({ id }) {
   console.log(cleanedData);
 
   return (
-    <div className="infos">
+    <div
+      className="infos"
+      onMouseOver={() => setIsHovering(true)}
+      onMouseOut={() => setIsHovering(false)}
+    >
+      {isHovering && <Popup sometext={posterImg} />}
       <img src={backdropImg}></img>
     </div>
   );
