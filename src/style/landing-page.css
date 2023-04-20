@@ -93,3 +93,17 @@ header {
   height: 100vh;
   background-repeat: no-repeat;
 }
+
+
+.block-white {
+  position: absolute;
+  background-color: black;
+  height: 123px;
+  width: 210px;
+
+  
+}
+
+.block-white h2{
+  color: white;
+}

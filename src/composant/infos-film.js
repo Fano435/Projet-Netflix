@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Popup from "./pop-up";
+
 
 function Infos({ id }) {
   const [userData, setUserdata] = useState("");
@@ -66,7 +66,12 @@ function Infos({ id }) {
       onMouseOver={() => setIsHovering(true)}
       onMouseOut={() => setIsHovering(false)}
     >
-      {/* {isHovering && <Popup sometext={posterImg} />} */}
+
+      {isHovering &&  
+      <div className="block-white">
+        <h2>Titre du film</h2>
+      </div>}
+
       <img src={backdropImg}></img>
     </div>
   );
