@@ -29,9 +29,8 @@ header {
   font-size: 120%;
 }
 .wrapper {
-  max-width: 1000px;
   display: flex;
-  
+  flex-direction: column;
 }
 h1 {
   width: 100%;

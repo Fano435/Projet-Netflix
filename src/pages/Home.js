@@ -9,7 +9,7 @@ function Home() {
 
   const numbers = [];
   for (let i = 0; i < 13; i++) {
-    numbers.push(Math.floor(Math.random() * 600));
+    numbers.push((Math.random() * 600));
   }
   return (
     <div>
@@ -18,9 +18,7 @@ function Home() {
         <section>
           <h1>Je suis la page d'acceuil</h1>
           {numbers.map((number) => (
-            <Link to={"/page"}>
-              <Infos id={number}></Infos>
-            </Link>
+            <Infos id={number}></Infos>
           ))}
         </section>
         <LandingPage />
