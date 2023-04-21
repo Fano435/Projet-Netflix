@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Modal from "./Modal";
+import ShowDate from "./date";
 
 function Infos({ page }) {
   const [userData, setUserdata] = useState("");
@@ -131,7 +132,8 @@ function Infos({ page }) {
           {hoveredMovie[movie.id] && (
             <Modal
               sometext={"https://image.tmdb.org/t/p/w200" + movie.poster_path}
-              somenote={movie.release_date}
+              somenote={movie.vote_average}
+              sometitle={movie.title}
               someresume={movie.overview}
               somegenre={getGenres(movie).join(" - ")}
             />
@@ -142,7 +144,9 @@ function Infos({ page }) {
           ></img>
           <div className="movie-info">
             <h2>{movie.title}</h2>
-            <span className="movie-date">{movie.vote_average}</span>
+            <span className="movie-date">
+              <ShowDate date={movie.release_date} />
+            </span>
           </div>
         </div>
       ))}

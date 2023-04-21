@@ -1,7 +1,7 @@
 .Infos-popup {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 1px;
+  right: 1px;
   background: white;
   display: flex;
   justify-content: space-between;
@@ -9,14 +9,14 @@
   width: 60%;
   padding: 20px;
   height: 40%;
-  border: 1px solid;
+  outline: 1px solid;
 }
 .Infos-popup ul {
   list-style: none;
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100%;
 }
 .Infos-popup img {
@@ -26,7 +26,7 @@
 }
 .Infos-popup h3 {
   color: rgb(51, 51, 51);
-  font-weight: 400;
+  font-weight: 500;
 }
 .Infos-popup span {
   color: rgb(51, 51, 51);

@@ -2,7 +2,7 @@ import React from "react";
 import "../style/styles.css";
 import "../style/modal.css";
 
-const Modal = ({ sometext, somenote, someresume, somegenre }) => {
+const Modal = ({ sometext, somenote, someresume, somegenre, sometitle }) => {
   return (
     <div className="Infos-popup">
       <img src={sometext}></img>
@@ -11,7 +11,7 @@ const Modal = ({ sometext, somenote, someresume, somegenre }) => {
           <span>{somegenre}</span>
         </li>
         <li>
-          <h3>{somenote}</h3>
+          <h3>{sometitle}</h3>
         </li>
         <li>
           <p> {someresume}</p>
