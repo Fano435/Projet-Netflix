@@ -1,21 +1,19 @@
 import React from "react";
 
-function Modal () {
+const Modal = ({ sometext, somenote , someresume, somegenre}) => {
 
-    return (
-      <div className="infos-modal">
+  return (
 
-        <h2>Titre</h2>
+    <div className="infos-modal">
+      
+      <img src={sometext}></img>
+      <ul>
+        <li>Genres : {somegenre} </li>
+        <li>Note : {somenote} / 100</li>
+        <li><p>Synopsis : {someresume}</p> </li>
+      </ul>
+    </div>
+  );
+};
 
-        <img></img>
-
-        {/* <ul>
-          <li>Genres :</li>
-          <li>Note :</li>
-          <li>Synopsis : </li>
-        </ul> */}
-      </div>
-    );
-  };
-
-export default Modal
+export default Modal;

@@ -70,7 +70,10 @@ function Infos({ id }) {
       onMouseOut={() => setIsHovering(false)}
     >
 
-      {isHovering && <Modal/>}
+      {isHovering && <Modal sometext={posterImg}
+                            somenote={voteAverage} 
+                            someresume={overView}
+                            somegenre={vraigenredufilm}/>}
 
       <img className="backdrop-img" src={backdropImg}></img>
     </div>
