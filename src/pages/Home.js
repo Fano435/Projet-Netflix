@@ -2,7 +2,7 @@ import Infos from "../composant/infos-film";
 import { Link } from "react-router-dom";
 import Header from "../composant/header";
 import LandingPage from "./landing-page";
-import Popup from "../composant/pop-up";
+
 
 
 function Home() {
@@ -16,7 +16,7 @@ function Home() {
       <div className="wrapper">
         <Header />
         <section>
-          <h1>Je suis la page d'acceuil</h1>
+          <h1>Je suis la page d'accueil</h1>
           {numbers.map((number) => (
             <Infos id={number}></Infos>
           ))}
