@@ -4,7 +4,8 @@ body {
   background-color: black;
   color: white;
 }
-/* tout pour le header */
+/* Header */
+
 header {
   display: flex;
   align-items: center;
@@ -32,7 +33,7 @@ header {
   width: 300px;
 }
 
-/* tout pour la landing page */
+/* Landing page */
 
 
 .w {
@@ -68,7 +69,7 @@ header {
   text-align: center;
 }
 
-/* section des choxi des films a regarder */
+/* section des choix des films a regarder */
 
 
 
@@ -94,16 +95,20 @@ header {
   background-repeat: no-repeat;
 }
 
+/* Modal */
 
-.block-white {
+.infos-modal {
   position: absolute;
-  background-color: black;
-  height: 123px;
-  width: 210px;
-
-  
+  background-color: rgba(0, 0, 0, 0.842);
+  height: 113px;
+  width: 200px;
 }
 
-.block-white h2{
+.infos-modal h2{
   color: white;
 }
+
+.infos-modal li {
+  list-style-type: none;
+}
+

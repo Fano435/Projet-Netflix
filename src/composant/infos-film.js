@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-
+import Modal from "./Modal";
 
 function Infos({ id }) {
+
   const [userData, setUserdata] = useState("");
   const [isHovering, setIsHovering] = useState(false);
 
@@ -60,19 +61,18 @@ function Infos({ id }) {
     getData(url);
   }, []);
 
+ 
   return (
+    
     <div
       className="infos"
       onMouseOver={() => setIsHovering(true)}
       onMouseOut={() => setIsHovering(false)}
     >
 
-      {isHovering &&  
-      <div className="block-white">
-        <h2>Titre du film</h2>
-      </div>}
+      {isHovering && <Modal/>}
 
-      <img src={backdropImg}></img>
+      <img className="backdrop-img" src={backdropImg}></img>
     </div>
   );
 }
