@@ -1,0 +1,40 @@
+.Infos-popup {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  padding: 20px;
+  height: 40%;
+  border: 1px solid;
+}
+.Infos-popup ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.Infos-popup img {
+  height: 80%;
+  object-fit: contain;
+  display: inline-block;
+}
+.Infos-popup h3 {
+  color: rgb(51, 51, 51);
+  font-weight: 400;
+}
+.Infos-popup span {
+  color: rgb(51, 51, 51);
+  font-style: italic;
+}
+.Infos-popup li {
+  font-weight: 300;
+}
+.Infos-popup p {
+  overflow: hidden;
+}

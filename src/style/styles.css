@@ -1,38 +1,86 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
-section {
+.content {
+  background: #f1f1f1;
+  position: relative;
+}
+.catalogue {
+  padding: 20px 0;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  row-gap: 20px;
+}
+.catalogue button {
+  background: none;
+  border: none;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+  font-size: 16px;
+  padding: 16px;
+  background: white;
+}
+.movie {
+  width: 20%;
+  display: inline-block;
+}
+.movie-info {
+  padding: 10px;
+  background: white;
+}
+.movie-info h2 {
+  font-size: 1rem;
+  min-height: 54px;
+  font-weight: 500;
+}
+.movie-date {
+  font-size: 16px;
+  color: coral;
+  font-weight: 500;
+}
+.backdrop-img {
+  aspect-ratio: 16/9;
+  width: 100%;
+  object-fit: cover;
+  display: block;
 }
 a {
   text-decoration: none;
-  color: white;
   text-transform: uppercase;
+  color: black;
 }
 a:hover {
   font-weight: 600;
 }
 body {
-  background-color: black;
-  color: white;
   background-repeat: no-repeat;
 }
 header {
+  background: white;
+}
+.header {
   display: flex;
   list-style: none;
   justify-content: space-between;
-  background-color: transparent;
   padding: 20px 0;
   width: 100%;
   align-items: center;
   font-size: 120%;
 }
 .wrapper {
-  display: flex;
-  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 h1 {
   width: 100%;
   font-size: 3rem;
+}
+.margin-bot {
+  margin-bottom: 40px;
 }

@@ -1,27 +1,38 @@
 import Infos from "../composant/infos-film";
 import { Link } from "react-router-dom";
 import Header from "../composant/header";
-import LandingPage from "./landing-page";
-
-
+import React, { useState, useEffect } from "react";
 
 function Home() {
-
-  const numbers = [];
-  for (let i = 0; i < 13; i++) {
-    numbers.push((Math.random() * 600));
-  }
+  const [count, setCount] = useState(1);
   return (
     <div>
-      <div className="wrapper">
-        <Header />
-        <section>
-          <h1>Je suis la page d'accueil</h1>
-          {numbers.map((number) => (
-            <Infos id={number}></Infos>
-          ))}
-        </section>
-        <LandingPage />
+      <Header />
+      <div className="content">
+        <div className="wrapper">
+          <section className="catalogue">
+            <nav className="pagination">
+              <button
+                onClick={() => {
+                  if (count > 1) {
+                    setCount(count - 1);
+                  }
+                }}
+              >
+                Previous
+              </button>
+              {count}
+              <button
+                onClick={() => {
+                  setCount(count + 1);
+                }}
+              >
+                Next
+              </button>
+            </nav>
+            <Infos page={count}></Infos>
+          </section>
+        </div>
       </div>
     </div>
   );

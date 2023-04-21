@@ -1,21 +1,24 @@
 import React from "react";
+import "../style/styles.css";
+import "../style/modal.css";
 
-function Modal () {
+const Modal = ({ sometext, somenote, someresume, somegenre }) => {
+  return (
+    <div className="Infos-popup">
+      <img src={sometext}></img>
+      <ul>
+        <li>
+          <span>{somegenre}</span>
+        </li>
+        <li>
+          <h3>{somenote}</h3>
+        </li>
+        <li>
+          <p> {someresume}</p>
+        </li>
+      </ul>
+    </div>
+  );
+};
 
-    return (
-      <div className="infos-modal">
-
-        <h2>Titre</h2>
-
-        <img></img>
-
-        {/* <ul>
-          <li>Genres :</li>
-          <li>Note :</li>
-          <li>Synopsis : </li>
-        </ul> */}
-      </div>
-    );
-  };
-
-export default Modal
+export default Modal;

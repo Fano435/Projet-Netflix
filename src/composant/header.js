@@ -6,17 +6,11 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header>
-      <span>
-        <li>
-          <Icon icon="logos:netflix" />
-        </li>
-      </span>
-      <Link to={"/"}>
-        <li>Home</li>
-      </Link>
-      <li>Movie</li>
-      <li>Tv Shows</li>
-      <li>My list</li>
+      <div className="wrapper header">
+        <Link to={"/"}>
+          <li>The greatest catalog</li>
+        </Link>
+      </div>
     </header>
   );
 };
