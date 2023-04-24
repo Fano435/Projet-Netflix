@@ -1,19 +1,19 @@
 import React,{ useState } from "react";
 import "../style/SearchResultsList.css";
+import { BarreDeRecherche } from "./searchbar";
 
 export const SearchResultsList = ( { film } ) => {
   const [suggestion, setSuggestion] = useState([])
+  console.log(film)
   const free = () => {
     for (let i in film) {
       film.forEach(element => {
-        const setSuggestion = (element)
-        console.log()
       });
     }
   }
   return (
     <div className="results-list">
-      {film}
+      {film?.map((title) => <p>{title}</p>)}
     </div>
   )
 }
