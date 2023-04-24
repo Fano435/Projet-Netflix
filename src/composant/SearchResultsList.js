@@ -13,7 +13,7 @@ export const SearchResultsList = ( { film } ) => {
   }
   return (
     <div className="results-list">
-      {free()}
+      {film}
     </div>
   )
 }
