@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Modal from "./Modal";
+
+
 
 function Infos({ id }) {
 
   const [userData, setUserdata] = useState("");
   const [isHovering, setIsHovering] = useState(false);
+  const [Ishere, setIsHere] = useState(true);
+  
+
 
   const url =
   "https://api.themoviedb.org/3/movie/" +
@@ -16,6 +21,9 @@ function Infos({ id }) {
     const jsonData = await rawData.json();
     setUserdata(jsonData);
   };
+  
+
+
 
   const cleanedData = filterProperties(userData);
 
@@ -31,15 +39,18 @@ function Infos({ id }) {
   let genredufilm = []
 
   for (let i in dataGenres) {
-    const valeurobjet = dataGenres[i]  
+    const valeurobjet = dataGenres[i]
     const film = valeurobjet.name
     genredufilm.push(film)
-    console.log(genredufilm)
   }
 
-  const vraigenredufilm = genredufilm.join(', ')
-  console.log(vraigenredufilm.split(','))
 
+
+  for (let obj in dataGenres) {
+    const gdf = dataGenres[obj].name
+  }
+  const vraigenredufilm = genredufilm.join(', ')
+  
 
 
   function filterProperties(obj) {
@@ -54,7 +65,7 @@ function Infos({ id }) {
         }
       }
     }
-    return filteredObj;
+    return filteredObj; 
   }
 
   useEffect(() => {
@@ -70,13 +81,16 @@ function Infos({ id }) {
       onMouseOut={() => setIsHovering(false)}
     >
 
+
       {isHovering && <Modal sometext={posterImg}
                             somenote={voteAverage} 
                             someresume={overView}
                             somegenre={vraigenredufilm}/>}
+      {}                   
 
       <img className="backdrop-img" src={backdropImg}></img>
     </div>
+    
   );
 }
 

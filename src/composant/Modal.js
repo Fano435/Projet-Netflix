@@ -1,9 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 
-const Modal = ({ sometext, somenote , someresume, somegenre}) => {
-
+const Modal = ({ sometext, somenote , someresume, somegenre}) => {  
   return (
-
     <div className="infos-modal">
       
       <img src={sometext}></img>
@@ -15,5 +13,8 @@ const Modal = ({ sometext, somenote , someresume, somegenre}) => {
     </div>
   );
 };
+
+
+
 
 export default Modal;
