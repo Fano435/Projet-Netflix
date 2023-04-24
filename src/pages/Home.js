@@ -30,9 +30,7 @@ function Home() {
                 Next
               </button>
             </nav>
-            <Link to="page">
-              <Infos page={count}></Infos>
-            </Link>
+            <Infos page={count}></Infos>
           </section>
         </div>
       </div>

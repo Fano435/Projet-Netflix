@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Modal from "./Modal";
 import ShowDate from "./date";
+import { Link } from "react-router-dom";
 
 function Infos({ page }) {
   const [userData, setUserdata] = useState("");
@@ -138,16 +139,18 @@ function Infos({ page }) {
               somegenre={getGenres(movie).join(" - ")}
             />
           )}
-          <img
-            className="backdrop-img"
-            src={"https://image.tmdb.org/t/p/w200" + movie.backdrop_path}
-          ></img>
-          <div className="movie-info">
-            <h2>{movie.title}</h2>
-            <span className="movie-date">
-              <ShowDate date={movie.release_date} />
-            </span>
-          </div>
+          <Link to={"/" + movie.id}>
+            <img
+              className="backdrop-img"
+              src={"https://image.tmdb.org/t/p/w200" + movie.backdrop_path}
+            ></img>
+            <div className="movie-info">
+              <h2>{movie.title}</h2>
+              <span className="movie-date">
+                <ShowDate date={movie.release_date} />
+              </span>
+            </div>
+          </Link>
         </div>
       ))}
     </div>
