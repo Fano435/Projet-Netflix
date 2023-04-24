@@ -4,17 +4,8 @@ body {
   background-color: black;
   color: white;
 }
-/* Header */
 
-header {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  background-color: transparent;
-  font-size: 18px;
-  
-  
-}
+
 
 .leftpartofheader {
   display: flex;
@@ -112,4 +103,80 @@ header {
 .infos-modal li {
   list-style-type: none;
 }
+
+/*Détails films*/
+
+.details .upper-block {
+  display: flex;
+  background-image: url(https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/h8gHn0OzBoaefsYseUByqsmEDMY.jpg);
+  margin-bottom: 40px;
+}
+
+.details .background{
+  background: rgba(0, 0, 0, 0.676);
+  width: 100%;
+}
+
+.details .title-ul{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 25%;
+  top: 14%;
+}
+
+.details h2{
+  font-size: 50px;
+
+}
+
+.details .facts{
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.details .img-film{
+  margin: 100px;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.25));
+}
+
+
+.details .date {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.details .resume {
+  font-weight: bold;
+  font-size: 35px;
+  margin: 50px;
+
+}
+
+
+.details p {
+  font-size: 22px;
+  margin: 50px 50px 70px;
+  
+}
+ .details .bottom-block{
+  display: flex;
+
+ }
+
+ .details .bottom-block li{
+  list-style-type: none;
+  font-size: 24px;
+  margin-right: 40px;
+ }
+ .details .bottom-block ul{
+  margin-top: 90px;
+ }
+
+ .details .bottom-block .bold-style{
+  font-weight: bold;
+ }
+
+
 

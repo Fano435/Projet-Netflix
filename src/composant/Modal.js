@@ -1,12 +1,14 @@
 import React from "react";
 
-const Modal = ({ sometext, somenote , someresume, somegenre}) => {
+
+const Modal = ({ sometext, somenote , someresume, somegenre,}) => {
 
   return (
-
-    <div className="infos-modal">
-      
+    
+  <div className="infos-modal">
+    
       <img src={sometext}></img>
+    
       <ul>
         <li>Genres : {somegenre} </li>
         <li>Note : {somenote} / 100</li>
