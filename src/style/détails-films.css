@@ -1,0 +1,13 @@
+.slider {
+  width: 100%;
+  overflow: scroll;
+}
+.slider-container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.slider-container img {
+  height: auto;
+  object-fit: cover;
+}

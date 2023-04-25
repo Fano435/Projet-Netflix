@@ -1,6 +1,6 @@
 import Header from "../composant/header";
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../style/détails-films.css";
 import getGenres from "../composant/genres";
 
@@ -26,7 +26,7 @@ function Détails() {
   }, [id]);
 
   const similarMoviesArray = similarMovies?.results;
-
+  console.log(similarMoviesArray);
   const title = movie?.title;
   return (
     <div>
@@ -34,6 +34,22 @@ function Détails() {
       <div className="content">
         <div className="wrapper">
           <h1>{title}</h1>
+          <section className="slider">
+            <h2>Films du même genre :</h2>
+            <div className="slider-container">
+              {similarMoviesArray
+                ?.filter((movie) => movie.poster_path !== null)
+                .map((movie) => (
+                  <Link to={"/" + movie.id}>
+                    <img
+                      src={
+                        "https://image.tmdb.org/t/p/w200" + movie.poster_path
+                      }
+                    ></img>
+                  </Link>
+                ))}
+            </div>
+          </section>
         </div>
       </div>
     </div>
