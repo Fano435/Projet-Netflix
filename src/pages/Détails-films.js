@@ -1,6 +1,7 @@
 import Header from "../composant/header";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "../style/détails-films.css";
 
 function Détails() {
   const { handle } = useParams();

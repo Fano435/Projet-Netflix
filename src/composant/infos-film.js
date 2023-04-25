@@ -26,7 +26,6 @@ function Infos({ page }) {
   };
 
   const popularMoviesArray = userData.results;
-  console.log(popularMoviesArray);
   const movieGenres = [
     {
       id: 28,

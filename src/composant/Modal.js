@@ -1,10 +1,9 @@
 import React from "react";
-import "../style/styles.css";
 import "../style/modal.css";
 
 const Modal = ({ sometext, somenote, someresume, somegenre, sometitle }) => {
   return (
-    <div className="Infos-popup">
+    <div className="Infos-modal">
       <img src={sometext}></img>
       <ul>
         <li>
