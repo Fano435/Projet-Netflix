@@ -34,37 +34,36 @@ function Infos({ page }) {
 
   return (
     <div>
-      {popularMoviesArray?.map((movie) => (
-        <div
-          className="movie"
-          onMouseOver={() => handleMouseOver(movie.id)}
-          onMouseOut={() => handleMouseOut(movie.id)}
-        >
-          {hoveredMovie[movie.id] && (
-            <Modal
-              sometext={"https://image.tmdb.org/t/p/w200" + movie.poster_path}
-              somenote={movie.vote_average}
-              sometitle={movie.title}
-              someresume={movie.overview}
-              somegenre={getGenres(movie).join(" - ")}
-            />
-          )}
-          <Link to={"/" + movie.id}>
-            <img
-              className="backdrop-img"
-              src={"https://image.tmdb.org/t/p/w200" + movie.backdrop_path}
-            ></img>
-            <div className="movie-info">
-              <h2>{movie.title}</h2>
-              <span className="movie-date">
-                <ShowDate date={movie.release_date} />
-              </span>
-            </div>
-          </Link>
-        </div>
-      ))}
-    </div>
-  );
+    {popularMoviesArray?.map((movie) => (
+      <div
+        className="movie"
+        onMouseOver={() => handleMouseOver(movie.id)}
+        onMouseOut={() => handleMouseOut(movie.id)}
+      >
+        {hoveredMovie[movie.id] && (
+          <Modal
+            sometext={"https://image.tmdb.org/t/p/w200" + movie.poster_path}
+            somenote={movie.vote_average}
+            sometitle={movie.title}
+            someresume={movie.overview}
+            somegenre={getGenres(movie).join(" - ")}
+          />
+        )}
+        <Link to={"/" + movie.id}>
+          <img
+            className="backdrop-img"
+            src={"https://image.tmdb.org/t/p/w200" + movie.backdrop_path}
+          ></img>
+          <div className="movie-info">
+            <h2>{movie.title}</h2>
+            <span className="movie-date">
+              <ShowDate date={movie.release_date} />
+            </span>
+          </div>
+        </Link>
+      </div>
+    ))}
+  </div>
+);
 }
-
 export default Infos;

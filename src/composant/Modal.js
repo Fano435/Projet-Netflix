@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/modal.css";
 
+
 const Modal = ({ sometext, somenote, someresume, somegenre, sometitle }) => {
   return (
     <div className="Infos-modal">
@@ -21,3 +22,5 @@ const Modal = ({ sometext, somenote, someresume, somegenre, sometitle }) => {
 };
 
 export default Modal;
+
+

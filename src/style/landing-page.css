@@ -1,0 +1,115 @@
+
+
+body {
+  background-color: black;
+  color: white;
+}
+/* Header */
+
+header {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  background-color: transparent;
+  font-size: 18px;
+  
+  
+}
+
+.leftpartofheader {
+  display: flex;
+  justify-content: space-around;
+  width: 700px;
+}
+
+.leftpartofheader span {
+  font-size: 20px;
+}
+
+.rightpartofheader {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 900px;
+  width: 300px;
+}
+
+/* Landing page */
+
+
+.w {
+  position: absolute;
+  top: 1400px;
+  left: 20px;
+  display: block;
+  width: 450px;
+  margin: 0 auto;
+}
+
+
+.landing-page ul {
+  list-style: none;
+  display:flex;
+  padding: 0px;
+  gap: 20px;
+}
+
+.premieritem {
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.deuxiemeitem {
+  background-color: grey;
+  padding: 10px;
+  border-radius: 7px;
+  text-align: center;
+}
+
+/* section des choix des films a regarder */
+
+
+
+.pop-netflix img {
+  width: 150px;
+  height: 250px;
+}
+
+.pop-netflix ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+
+.landing-page {
+  background-color:white;
+  background-image: url(https://images7.alphacoders.com/118/thumbbig-1189470.webp);
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+/* Modal */
+
+.infos-modal {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.842);
+  height: 113px;
+  width: 200px;
+  
+}
+
+.infos-modal h2{
+  color: white;
+}
+
+.infos-modal li {
+  list-style-type: none;
+}
+
