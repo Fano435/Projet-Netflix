@@ -1,21 +1,28 @@
 import React from "react";
+import "../style/modal.css";
 
 
-const Modal = ({ sometext, somenote , someresume, somegenre,}) => {
 
+const Modal = ({ sometext, somenote, someresume, somegenre, sometitle }) => {
   return (
-    
-  <div className="infos-modal">
-    
+    <div className="Infos-modal">
       <img src={sometext}></img>
     
       <ul>
-        <li>Genres : {somegenre} </li>
-        <li>Note : {somenote} / 100</li>
-        <li><p>Synopsis : {someresume}</p> </li>
+        <li>
+          <span>{somegenre}</span>
+        </li>
+        <li>
+          <h3>{sometitle}</h3>
+        </li>
+        <li>
+          <p> {someresume}</p>
+        </li>
       </ul>
     </div>
   );
 };
 
 export default Modal;
+
+
