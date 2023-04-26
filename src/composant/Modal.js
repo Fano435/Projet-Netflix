@@ -2,10 +2,12 @@ import React from "react";
 import "../style/modal.css";
 
 
+
 const Modal = ({ sometext, somenote, someresume, somegenre, sometitle }) => {
   return (
     <div className="Infos-modal">
       <img src={sometext}></img>
+    
       <ul>
         <li>
           <span>{somegenre}</span>

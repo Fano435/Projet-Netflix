@@ -28,6 +28,7 @@ function Infos({ page }) {
 
   const popularMoviesArray = userData.results;
 
+
   useEffect(() => {
     getData(url);
   }, [page]);

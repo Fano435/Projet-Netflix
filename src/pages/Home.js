@@ -1,6 +1,7 @@
 import Infos from "../composant/infos-film";
 import { Link } from "react-router-dom";
 import Header from "../composant/header";
+
 import React, { useState, useEffect } from "react";
 
 function Home() {
@@ -33,6 +34,7 @@ function Home() {
             <Infos page={count}></Infos>
           </section>
         </div>
+
       </div>
     </div>
   );
