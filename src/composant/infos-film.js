@@ -81,26 +81,6 @@ function Infos({ page }) {
     getData(url);
   }, [page]);
 
-  return (
-
-    
-    <div
-      className="infos"
-      onMouseOver={() => setIsHovering(true)}
-      onMouseOut={() => setIsHovering(false)}
-    >
-
-
-      {isHovering && <Modal sometext={posterImg}
-                            somenote={voteAverage} 
-                            someresume={overView}
-                            somegenre={vraigenredufilm}/>}
-      {}                   
-
-      <img className="backdrop-img" src={backdropImg}></img>
-    </div>
-    
-  );
 
     <div>
     {popularMoviesArray?.map((movie) => (
