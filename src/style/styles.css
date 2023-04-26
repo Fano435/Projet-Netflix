@@ -1,40 +1,122 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
-section {
+.content {
+  background: #f1f1f1;
+  position: relative;
+  height: 180vh;
+  padding: 3%;
+}
+.catalogue {
+  padding: 20px 0;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  row-gap: 20px;
+  border-collapse: collapse;
+}
+
+.pagination button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.pagination button:hover {
+  background: #f1f1f1;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 20%;
+  font-size: 16px;
+  padding: 16px;
+  background: white;
+}
+.movie {
+  width: 20%;
+  display: inline-block;
+  outline: 1px solid;
+}
+.movie-info {
+  padding: 10px;
+  background: white;
+}
+.movie-info h2 {
+  font-size: 1rem;
+  min-height: 54px;
+  font-weight: 500;
+}
+.movie-date {
+  font-size: 14px;
+  font-weight: 400;
+}
+.backdrop-img {
+  aspect-ratio: 16/9;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+body {
+  background-repeat: no-repeat;
+}
+
+/* Header */
+
+header {
+  background: white;
+}
+.header a {
+  text-transform: uppercase;
+}
+.header a:hover {
+  font-weight: 600;
 }
 a {
+  color: black;
   text-decoration: none;
-  color: white;
-  text-transform: uppercase;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px 0;
+  width: 100%;
+  align-items: center;
+  font-size: 24px;
+
+}
+
+a {
+  font-size: 24px;
+  text-decoration: none;
+  list-style: none;
 }
 a:hover {
   font-weight: 600;
 }
-body {
-  background-color: black;
-  color: white;
-  background-repeat: no-repeat;
-}
-header {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  background-color: transparent;
-  padding: 20px 0;
-  width: 100%;
-  align-items: center;
-  font-size: 120%;
-}
+
+/**/
 .wrapper {
-  display: flex;
-  flex-direction: column;
+
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
 h1 {
+  margin: 2% 0;
   width: 100%;
   font-size: 3rem;
 }
 
+h2 {
+  margin: 2% 0;
+  width: 100%;
+  font-size: 25px;
+}
+
+.margin-bot {
+  margin-bottom: 40px;
+}
 

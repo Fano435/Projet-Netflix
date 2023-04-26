@@ -4,17 +4,8 @@ body {
   background-color: black;
   color: white;
 }
-/* Header */
 
-header {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  background-color: transparent;
-  font-size: 18px;
-  
-  
-}
+
 
 .leftpartofheader {
   display: flex;
@@ -112,4 +103,8 @@ header {
 .infos-modal li {
   list-style-type: none;
 }
+
+
+
+
 
