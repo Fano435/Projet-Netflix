@@ -21,7 +21,6 @@ function Infos({ page }) {
   const url =
     "https://api.themoviedb.org/3/movie/top_rated?api_key=d39ae299256eab37e526904cb2b272b3&language=en-US&page=" +
     page;
-
   const getData = async (url) => {
     const rawData = await fetch(url);
     const jsonData = await rawData.json();
