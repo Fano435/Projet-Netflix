@@ -96,7 +96,7 @@ function Détails() {
 
               <ul>
                 <li><span className="bold-style">Titre d'origine : </span>  {original_title} </li>
-                <li><span className="bold-style">Genre : </span> {Genress} </li>
+                <li><span className="bold-style">Genre : </span> {Genress.join(" - ")} </li>
                 <li><span className="bold-style">Date de sortie : </span> <ShowDate date={date}></ShowDate> </li>
                 <li><span className="bold-style">Langue d'origine : </span> {language} </li>
                 <li><span className="bold-style">Durée du film : </span>  </li>

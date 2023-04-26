@@ -1,16 +1,17 @@
 import Infos from "../composant/infos-film";
 import { Link } from "react-router-dom";
 import Header from "../composant/header";
-
 import React, { useState, useEffect } from "react";
+import { BarreDeRecherche } from "../composant/searchbar";
 
 function Home() {
   const [count, setCount] = useState(1);
   return (
     <div>
-      <Header />
+      <Header /> 
       <div className="content">
         <div className="wrapper">
+        <BarreDeRecherche/>
           <section className="catalogue">
             <nav className="pagination">
               <button
@@ -28,11 +29,11 @@ function Home() {
                   setCount(count + 1);
                 }}
               >
-                Next
-              </button>
-            </nav>
-            <Infos page={count}></Infos>
-          </section>
+                Next 
+              </button> 
+            </nav> 
+            <Infos page={count}></Infos> 
+          </section> 
         </div>
 
       </div>
