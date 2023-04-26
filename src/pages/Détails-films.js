@@ -38,16 +38,29 @@ function Détails() {
   const resume = movie?.overview;
   const img = "https://image.tmdb.org/t/p/w200" + movie?.poster_path
   const language = movie?.original_language;
+  const genre = movie?.genres
+  const Genress = []
+  for (const i in genre) {
+    Genress.push(genre[i].name)
+    Genress.join(" ")
+    console.log()
+  }
+  
+
+  
+
   // if (movie) {
   //   const genres = getGenres(movie);
   //   console.log(movie);
   //   console.log(genres);
 
   // }
+
   return (
     
     <div>
       <Header />
+      
 
       <div className="details">
      
@@ -84,7 +97,7 @@ function Détails() {
 
               <ul>
                 <li><span className="bold-style">Titre d'origine : </span>  {original_title} </li>
-                <li><span className="bold-style">Genre : </span> {} </li>
+                <li><span className="bold-style">Genre : </span> {Genress} </li>
                 <li><span className="bold-style">Date de sortie : </span> <ShowDate date={date}></ShowDate> </li>
                 <li><span className="bold-style">Langue d'origine : </span> {language} </li>
                 <li><span className="bold-style">Durée du film : </span>  </li>

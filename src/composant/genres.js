@@ -91,4 +91,5 @@ function getGenres(movie) {
   return genres;
 }
 
+
 export default getGenres;
