@@ -4,7 +4,7 @@ import ShowDate from "./date";
 import { Link } from "react-router-dom";
 import getGenres from "./genres";
 
-function Infos({ page }) {
+function Infos({ page, genres }) {
   const [userData, setUserdata] = useState("");
   const [hoveredMovie, setHoveredMovie] = useState({});
 
@@ -16,9 +16,7 @@ function Infos({ page }) {
     setHoveredMovie((prevState) => ({ ...prevState, [movieId]: false }));
   }
 
-  const url =
-    "https://api.themoviedb.org/3/movie/top_rated?api_key=d39ae299256eab37e526904cb2b272b3&language=en-US&page=" +
-    page;
+  const url = `https://api.themoviedb.org/3/discover/movie?api_key=d39ae299256eab37e526904cb2b272b3&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genres}`;
 
   const getData = async (url) => {
     const rawData = await fetch(url);
@@ -27,14 +25,17 @@ function Infos({ page }) {
   };
 
   const popularMoviesArray = userData.results;
+  let popularMoviesCleaned = popularMoviesArray?.filter(
+    (movie) => movie.backdrop_path != null
+  );
 
   useEffect(() => {
     getData(url);
-  }, [page]);
+  }, [page, genres]);
 
   return (
     <div>
-      {popularMoviesArray?.map((movie) => (
+      {popularMoviesCleaned?.map((movie) => (
         <div
           className="movie"
           onMouseOver={() => handleMouseOver(movie.id)}
