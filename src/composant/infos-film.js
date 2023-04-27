@@ -3,6 +3,7 @@ import Modal from "./Modal";
 import ShowDate from "./date";
 import { Link } from "react-router-dom";
 import getGenres from "./genres";
+import { SearchResultsList } from "./SearchResultsList";
 
 function Infos({ page }) {
   const [userData, setUserdata] = useState("");
@@ -24,7 +25,6 @@ function Infos({ page }) {
     const jsonData = await rawData.json();
     setUserdata(jsonData);
   };
-
   const popularMoviesArray = userData.results;
 
 
