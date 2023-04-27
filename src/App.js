@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./style/styles.css";
-import Détails from "./pages/Détails-films";
+import "./style/Styles.css";
+import Détails from "./pages/FilmsDetails";
 import Home from "./pages/Home";
 
 function App() {

@@ -1,9 +1,9 @@
-import Header from "../composant/header";
+import Header from "../composant/Header";
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import "../style/détails-films.css";
-import getGenres from "../composant/genres";
-import ShowDate from "../composant/date";
+import "../style/FilmsDetails.css";
+import getGenres from "../composant/Gender";
+import ShowDate from "../composant/Date";
 import { SearchResultsList } from "../composant/SearchResultsList";
 
 function Détails() {

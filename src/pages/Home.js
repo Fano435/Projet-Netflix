@@ -1,8 +1,8 @@
-import Infos from "../composant/infos-film";
+import Infos from "../composant/FilmsInfo";
 import { Link } from "react-router-dom";
-import Header from "../composant/header";
+import Header from "../composant/Header";
 import React, { useState, useEffect } from "react";
-import { BarreDeRecherche } from "../composant/searchbar";
+import { BarreDeRecherche } from "../composant/Searchbar";
 
 function Home() {
 

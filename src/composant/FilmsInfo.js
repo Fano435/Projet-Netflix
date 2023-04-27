@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Modal from "./Modal";
-import ShowDate from "./date";
+import ShowDate from "./Date";
 import { Link } from "react-router-dom";
-import getGenres from "./genres";
+import getGenres from "./Gender";
 import { SearchResultsList } from "./SearchResultsList";
 
 

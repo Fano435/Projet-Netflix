@@ -1,6 +1,6 @@
 
 import React from "react";
-import "../style/modal.css";
+import "../style/Modal.css";
 
 
 
