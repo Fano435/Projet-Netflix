@@ -16,7 +16,9 @@ function Infos({ page, genres }) {
     setHoveredMovie((prevState) => ({ ...prevState, [movieId]: false }));
   }
 
-  const url = `https://api.themoviedb.org/3/discover/movie?api_key=d39ae299256eab37e526904cb2b272b3&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genres}`;
+  const url =
+    "https://api.themoviedb.org/3/movie/top_rated?api_key=d39ae299256eab37e526904cb2b272b3&language=en-US&page=" +
+    page;
 
   const getData = async (url) => {
     const rawData = await fetch(url);
@@ -25,9 +27,6 @@ function Infos({ page, genres }) {
   };
 
   const popularMoviesArray = userData.results;
-  let popularMoviesCleaned = popularMoviesArray?.filter(
-    (movie) => movie.backdrop_path != null
-  );
 
   useEffect(() => {
     getData(url);
@@ -35,7 +34,7 @@ function Infos({ page, genres }) {
 
   return (
     <div>
-      {popularMoviesCleaned?.map((movie) => (
+      {popularMoviesArray?.map((movie) => (
         <div
           className="movie"
           onMouseOver={() => handleMouseOver(movie.id)}
@@ -67,5 +66,4 @@ function Infos({ page, genres }) {
     </div>
   );
 }
-
 export default Infos;
