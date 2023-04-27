@@ -4,10 +4,15 @@ import { Link, useParams } from "react-router-dom";
 import "../style/détails-films.css";
 import getGenres from "../composant/genres";
 import ShowDate from "../composant/date";
+import { SearchResultsList } from "../composant/SearchResultsList";
 
 function Détails() {
   const { id } = useParams();
+  console.log(id)
   const [movie, setMovie] = useState(null);
+
+  console.log(movie)
+
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/${id}
@@ -35,13 +40,32 @@ function Détails() {
   const resume = movie?.overview;
   const img = "https://image.tmdb.org/t/p/w200" + movie?.poster_path;
   const language = movie?.original_language;
-  const genre = movie?.genres;
-  const Genress = [];
+
+  const genre = movie?.genres
+  const ID = movie?.id
+ 
+  const Genress = []
   for (const i in genre) {
-    Genress.push(genre[i].name);
-    Genress.join(" ");
-    console.log();
+    Genress.push(genre[i].name)
+    Genress.join(" ")
+
   }
+
+
+
+  
+
+  
+
+  
+
+  // if (movie) {
+  //   const genres = getGenres(movie);
+  //   console.log(movie);
+  //   console.log(genres);
+
+  // }
+
 
   console.log(movie);
   return (
@@ -103,6 +127,7 @@ function Détails() {
           <h2 className="underlined">Similar movies</h2>
           <section className="slider">
             <div className="slider-container">
+              <SearchResultsList Filmbdr={ID}/>
               {similarMoviesArray
                 ?.filter((movie) => movie.poster_path !== null)
                 .map((movie) => (
