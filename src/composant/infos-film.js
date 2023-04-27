@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import getGenres from "./genres";
 
 function Infos({ page, genres }) {
-  const [userData, setUserdata] = useState("");
+  const [popularMovies, setPopularMovies] = useState("");
   const [hoveredMovie, setHoveredMovie] = useState({});
 
   function handleMouseOver(movieId) {
@@ -21,14 +21,14 @@ function Infos({ page, genres }) {
   const getData = async (url) => {
     const rawData = await fetch(url);
     const jsonData = await rawData.json();
-    setUserdata(jsonData);
+    setPopularMovies(jsonData);
   };
-
-  const popularMoviesArray = userData.results;
-
   useEffect(() => {
     getData(url);
   }, [page, genres]);
+
+  const popularMoviesArray = popularMovies.results;
+
   console.log(popularMoviesArray);
 
   return (

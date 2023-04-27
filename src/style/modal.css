@@ -4,10 +4,10 @@
   right: 1px;
   background: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 20px;
   height: 30%;
+  width: 100%;
   outline: 1px solid;
 }
 .Infos-modal ul {

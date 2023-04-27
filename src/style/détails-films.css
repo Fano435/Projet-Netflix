@@ -69,7 +69,7 @@
 
 h2.underlined {
   padding: 20px 0;
-  text-decoration: underline;
+  text-transform: uppercase;
 }
 .slider {
   width: 100%;

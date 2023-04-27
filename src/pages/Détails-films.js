@@ -42,6 +42,7 @@ function Détails() {
     Genress.join(" ");
     console.log();
   }
+
   console.log(movie);
   return (
     <div>
@@ -72,25 +73,26 @@ function Détails() {
         <div className="wrapper">
           <ul>
             <li>
-              <span className="bold-style">Titre d'origine : </span>{" "}
+              <span className="bold-style">Original Title : </span>{" "}
               {original_title}{" "}
             </li>
             <li>
               <span className="bold-style">Genre : </span> {Genress.join(" - ")}{" "}
             </li>
             <li>
-              <span className="bold-style">Date de sortie : </span>{" "}
+              <span className="bold-style">Release date : </span>{" "}
               <ShowDate date={date}></ShowDate>{" "}
             </li>
             <li>
-              <span className="bold-style">Langue d'origine : </span> {language}{" "}
+              <span className="bold-style">Original language : </span>{" "}
+              {language}{" "}
             </li>
             <li>
-              <span className="bold-style">Durée du film : </span>{" "}
-              {movie?.runtime} mins
+              <span className="bold-style">Runtime : </span> {movie?.runtime}{" "}
+              min
             </li>
             <li>
-              <span className="bold-style">Budget : </span> $ {movie?.budget}
+              <span className="bold-style">Budget : </span> {movie?.budget}
             </li>
           </ul>
         </div>
@@ -98,7 +100,7 @@ function Détails() {
 
       <div className="content">
         <div className="wrapper">
-          <h2 className="underlined">Films du même genre</h2>
+          <h2 className="underlined">Similar movies</h2>
           <section className="slider">
             <div className="slider-container">
               {similarMoviesArray
