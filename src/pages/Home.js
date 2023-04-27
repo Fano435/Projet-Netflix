@@ -65,8 +65,5 @@ function Home() {
 
   );
 }
-
-
-console.log(".bonjour")
 export default Home;
 

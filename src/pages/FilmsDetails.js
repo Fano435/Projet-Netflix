@@ -51,22 +51,6 @@ function Détails() {
 
   }
 
-
-
-  
-
-  
-
-  
-
-  // if (movie) {
-  //   const genres = getGenres(movie);
-  //   console.log(movie);
-  //   console.log(genres);
-
-  // }
-
-
   console.log(movie);
   return (
     <div>

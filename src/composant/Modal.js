@@ -4,21 +4,21 @@ import "../style/Modal.css";
 
 
 
-const Modal = ({ sometext, somenote, someresume, somegenre, sometitle }) => {
+const Modal = ({ img, resume, genre, title }) => {
   return (
     <div className="Infos-modal">
 
-      <img src={sometext}></img>
+      <img src={img}></img>
     
       <ul>
         <li>
-          <span>{somegenre}</span>
+          <span>{genre}</span>
         </li>
         <li>
-          <h3>{sometitle}</h3>
+          <h3>{title}</h3>
         </li>
         <li>
-          <p> {someresume}</p>
+          <p> {resume}</p>
         </li>
       </ul>
     </div>
