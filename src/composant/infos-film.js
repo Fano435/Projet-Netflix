@@ -3,6 +3,7 @@ import Modal from "./Modal";
 import ShowDate from "./date";
 import { Link } from "react-router-dom";
 import getGenres from "./genres";
+import { SearchResultsList } from "./SearchResultsList";
 
 
 function Infos({ page, genres }) {

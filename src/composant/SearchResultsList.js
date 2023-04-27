@@ -1,10 +1,16 @@
 import React,{ useState } from "react";
 import "../style/SearchResultsList.css";
-import { BarreDeRecherche } from "./searchbar";
+import { Link } from "react-router-dom";
 
-export const SearchResultsList = ( { film } ) => {
+
+
+
+export const SearchResultsList = ( { film, listeAPii } ) => {
   const [suggestion, setSuggestion] = useState([])
-  console.log(film)
+  const [isShown, setIsShown] = useState(false);
+
+
+
   const free = () => {
     for (let i in film) {
       film.forEach(element => {
@@ -12,8 +18,15 @@ export const SearchResultsList = ( { film } ) => {
     }
   }
   return (
-    <div className="results-list">
-      {film?.map((title) => <p>{title}</p>)}
+    <div className="results-list"
+    onMouseEnter={() => setIsShown(true)}
+    onMouseLeave={() => setIsShown(false)}
+    >
+      {isShown && (
+        console.log()
+      )}
+      {film?.map((title, index) => 
+      <Link to={"/" + title.id}> <p>{title.title}</p></Link>)}
     </div>
   )
 }
