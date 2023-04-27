@@ -33,7 +33,7 @@ function Infos({ page, genres }) {
   }, [page, genres]);
 
   return (
-    <div>
+    <div className="catalogue">
       {popularMoviesArray?.map((movie) => (
         <div
           className="movie"

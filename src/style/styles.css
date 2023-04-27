@@ -5,16 +5,15 @@
 .content {
   background: #f1f1f1;
   position: relative;
-  height: 180vh;
-  padding: 3%;
 }
 .catalogue {
+  position: relative;
   padding: 20px 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 20px;
-  border-collapse: collapse;
+  justify-content: space-between;
+  row-gap: 12px;
 }
 
 .pagination button {
@@ -35,6 +34,7 @@ select {
   font-size: 16px;
   padding: 16px;
   background: white;
+  border-radius: 4px;
 }
 select {
   border: none;
@@ -42,13 +42,20 @@ select {
   -webkit-appearance: none;
 }
 .movie {
-  width: 20%;
-  display: inline-block;
+  width: 19%;
   outline: 1px solid;
+  background: white;
+  transition: 0.4s ease;
+  border-radius: 4px;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .movie {
+    width: 24%;
+  }
 }
 .movie-info {
   padding: 10px;
-  background: white;
 }
 .movie-info h2 {
   font-size: 1rem;
@@ -64,6 +71,7 @@ select {
   width: 100%;
   object-fit: cover;
   display: block;
+  transition: 0.4s ease;
 }
 body {
   background-repeat: no-repeat;
@@ -84,15 +92,16 @@ a {
   color: black;
   text-decoration: none;
 }
+.homepage {
+  margin-bottom: 160px;
+}
 .header {
   display: flex;
   justify-content: space-between;
-
   padding: 20px 0;
   width: 100%;
   align-items: center;
   font-size: 24px;
-
 }
 
 a {
@@ -106,18 +115,15 @@ a:hover {
 
 /**/
 .wrapper {
-
   max-width: 1000px;
   margin: 0 auto;
 }
 
 h1 {
-  margin: 2% 0;
   width: 100%;
   font-size: 3rem;
 }
 h2 {
-  margin: 2% 0;
   width: 100%;
   font-size: 25px;
 }

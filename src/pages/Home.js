@@ -8,33 +8,31 @@ function Home() {
   const [count, setCount] = useState(1);
   const [selectedGenre, setSelectedGenre] = useState("");
   return (
-    <div>
+    <div className="homepage">
       <Header />
       <div className="content">
         <div className="wrapper">
           <BarreDeRecherche />
-          <section className="catalogue">
-            <nav className="pagination">
-              <button
-                onClick={() => {
-                  if (count > 1) {
-                    setCount(count - 1);
-                  }
-                }}
-              >
-                Previous
-              </button>
-              {count}
-              <button
-                onClick={() => {
-                  setCount(count + 1);
-                }}
-              >
-                Next
-              </button>
-            </nav>
-            <Infos page={count}></Infos>
-          </section>
+          <nav className="pagination">
+            <button
+              onClick={() => {
+                if (count > 1) {
+                  setCount(count - 1);
+                }
+              }}
+            >
+              Previous
+            </button>
+            {count}
+            <button
+              onClick={() => {
+                setCount(count + 1);
+              }}
+            >
+              Next
+            </button>
+          </nav>
+          <Infos page={count}></Infos>
         </div>
       </div>
     </div>
