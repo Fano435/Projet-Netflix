@@ -1,54 +1,20 @@
 import Infos from "../composant/infos-film";
 import { Link } from "react-router-dom";
 import Header from "../composant/header";
-
-import LandingPage from "./landing-page";
-import { BarreDeRecherche } from "../composant/searchbar";
-import { useState } from "react";
-import { SearchResult } from "semantic-ui-react";
-import { SearchResultsList } from "../composant/SearchResultsList";
-
-
-
-
 import React, { useState, useEffect } from "react";
+import { BarreDeRecherche } from "../composant/searchbar";
 
 function Home() {
 
-
-  const [movie, setMovie] = useState([])
-
-
-
-  const numbers = [];
-  for (let i = 0; i < 50; i++) {
-    numbers.push((Math.random() * 600));
-  }
-  return (
-    <div>
-      <div className="wrapper">
-        <Header/>
-        <div>
-        <BarreDeRecherche/>
-        </div>
-        <h1>Suggestion</h1>
-        <SearchResultsList/>
-        <section>
-          <h1>Je suis la page d'accueil</h1>
-          {numbers.map((number) => (
-            <Infos id={number}></Infos>
-          ))}
-        </section>
-        <LandingPage/>
-      </div>  
-
   const [count, setCount] = useState(1);
+  const [selectedGenre, setSelectedGenre] = useState("");
   return (
-    <div>
+    <div className="homepage">
       <Header />
       <div className="content">
         <div className="wrapper">
-          <section className="catalogue">
+          <BarreDeRecherche />
+          <div className="filters">
             <nav className="pagination">
               <button
                 onClick={() => {
@@ -68,10 +34,31 @@ function Home() {
                 Next
               </button>
             </nav>
-            <Infos page={count}></Infos>
-          </section>
+            <select onChange={(event) => setSelectedGenre(event.target.value)}>
+              <option value="all">All Genres</option>
+              <option value="28">Action</option>
+              <option value="12">Adventure</option>
+              <option value="16">Animation</option>
+              <option value="35">Comedy</option>
+              <option value="80">Crime</option>
+              <option value="99">Documentary</option>
+              <option value="18">Drama</option>
+              <option value="10751">Family</option>
+              <option value="14">Fantasy</option>
+              <option value="36">History</option>
+              <option value="27">Horror</option>
+              <option value="10402">Music</option>
+              <option value="9648">Mystery</option>
+              <option value="10749">Romance</option>
+              <option value="878">Science Fiction</option>
+              <option value="10770">TV Movie</option>
+              <option value="53">Thriller</option>
+              <option value="10752">War</option>
+              <option value="37">Western</option>
+            </select>
+          </div>
+          <Infos page={count} genres={selectedGenre}></Infos>
         </div>
-
       </div>
 
     </div>
