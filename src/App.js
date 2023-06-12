@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./style/Styles.css";
+import "./style/styles.css";
 import Détails from "./pages/FilmsDetails";
 import Home from "./pages/Home";
 
